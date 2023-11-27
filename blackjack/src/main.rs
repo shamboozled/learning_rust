@@ -52,7 +52,7 @@ fn main() {
                 println!("Oh no! You lose.");
                 break;
             }
-        } else {
+        } else if guess == "s" {
             println!("You ended the game. Your score is {player_score}.");
             println!("The dealer's other card was {dealer_card_2}. The dealer's score is {dealer_score}.");
             if dealer_score > player_score {
@@ -63,6 +63,8 @@ fn main() {
                 println!("A tie! What are the odds? Guess we'll have to play again...");
             }
             break;
+        } else {
+            println!("Invalid input.");
         }
     }
 }
